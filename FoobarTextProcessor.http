@@ -1,0 +1,6 @@
+@FoobarTextProcessor_HostAddress = http://localhost:5159
+
+GET {{FoobarTextProcessor_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
