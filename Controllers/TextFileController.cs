@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace FoobarTextProcessor.Server.Controllers
 {
-    [Route("[controller]")]
+    [Route("/[controller]")]
     [ApiController]
     public class TextFileController : ControllerBase
     {
