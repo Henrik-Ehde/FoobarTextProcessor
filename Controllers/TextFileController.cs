@@ -10,7 +10,6 @@ namespace FoobarTextProcessor.Server.Controllers
     public class TextFileController : ControllerBase
     {
 
-        // POST api/<TextFileController>
         [HttpPost]
         public ActionResult<string> Post(IFormFile file)
         {
@@ -40,14 +39,9 @@ namespace FoobarTextProcessor.Server.Controllers
 
             //Find each instance of the most common word and replace it with the word surround by foo+bar
             string pattern = @"\b"+mostCommonWord+@"\b";
-            string replace = "FOO" + mostCommonWord + "BAR";
-            //text = Regex.Replace(text, pattern, replace, RegexOptions.IgnoreCase);
             text = Regex.Replace(text, pattern, "foo$&bar", RegexOptions.IgnoreCase);
-
-
             return text;
         }
 
- 
     }
 }
